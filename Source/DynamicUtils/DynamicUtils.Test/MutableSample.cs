@@ -2,7 +2,7 @@
 
 namespace DynamicUtils.Test
 {
-    class Class2
+    class MutableSample
     {
         public int Id { get; set; }
         public DateTime Time { get; set; }
