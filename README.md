@@ -8,7 +8,7 @@ NuGet package: https://www.nuget.org/packages/Ufcpp.DynamicUtils/
 
 ### Summary
 
-get/set properties through IDictionary with property names as a key by using Expression Trees.
+get/set properties through `IDictionary<string, object>` with property names as a key by using Expression Trees.
 
 ### Sample
 
