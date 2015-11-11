@@ -63,13 +63,9 @@ namespace DynamicUtils
             {
                 var value = _getter(_instance, key);
 
-                if (value == null
-                    || value.GetType().GetTypeInfo().IsPrimitive
-                    || value is decimal
-                    || value is string
-                    || value is DateTime
-                    || value is DateTimeOffset
-                    ) return value;
+                if (IsNativeType(value)
+                    )
+                    return value;
 
                 return DictionaryAccessor.AsDictionary(value);
             }
@@ -86,6 +82,26 @@ namespace DynamicUtils
                     _setter(_instance, key, value);
                 }
             }
+        }
+
+        private static bool IsNativeType(object value) => value == null || IsNativeType(value.GetType());
+
+        private static bool IsNativeType(Type t)
+        {
+            if (t.IsArray)
+            {
+                return IsNativeType(t.GetElementType());
+            }
+            else if (t.GetTypeInfo().IsGenericType && t.GetGenericTypeDefinition() == typeof(Nullable<>))
+            {
+                return IsNativeType(t.GetGenericArguments()[0]);
+            }
+
+            return t.GetTypeInfo().IsPrimitive
+                || t == typeof(decimal)
+                || t == typeof(string)
+                || t == typeof(DateTime)
+                || t == typeof(DateTimeOffset);
         }
 
         int ICollection<KeyValuePair<string, object>>.Count => _keys.Count;
