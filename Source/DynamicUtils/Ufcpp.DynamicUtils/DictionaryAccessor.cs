@@ -108,7 +108,7 @@ namespace DynamicUtils
 
         bool ICollection<KeyValuePair<string, object>>.IsReadOnly => true;
 
-        ICollection<string> IDictionary<string, object>.Keys => _keys;
+        public ICollection<string> Keys => _keys;
 
         ICollection<object> IDictionary<string, object>.Values => this.Select(x => x.Value).ToArray();
 

@@ -1,12 +1,12 @@
 ﻿{
-  "version": "1.1.0-*",
+  "version": "1.2.1-*",
   "description": "Utilities for reflection, expression trees, dynamic features.",
   "authors": [ "iwanaga" ],
   "tags": [ "dynamic, expression trees" ],
   "projectUrl": "https://github.com/ufcpp/DynamicUtils",
   "licenseUrl": "https://github.com/ufcpp/DynamicUtils/blob/master/LICENSE",
   "exclude": [ "*.shproj", "*.projitems" ],
-  "releaseNotes": "arrays and nullables",
+  "releaseNotes": "Ignore properties which has a ***Ignore atttribute",
 
   "frameworks": {
     "dotnet": {
