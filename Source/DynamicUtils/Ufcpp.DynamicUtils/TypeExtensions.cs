@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using static System.Reflection.BindingFlags;
 
 namespace DynamicUtils
 {
@@ -15,16 +16,7 @@ namespace DynamicUtils
         /// </summary>
         /// <param name="ti"></param>
         /// <returns></returns>
-        public static IEnumerable<FieldInfo> GetAllFields(this TypeInfo ti)
-        {
-            var properties = ti.DeclaredFields.Where(f => !f.IsStatic && (f.Attributes & FieldAttributes.SpecialName) == 0);
-
-            var b = ti.BaseType;
-            if (b == null)
-                return properties;
-            else
-                return GetAllFields(b.GetTypeInfo()).Concat(properties);
-        }
+        public static IEnumerable<FieldInfo> GetAllFields(this Type t) => t.GetFields(Public | Instance).Where(f => !f.IsStatic && (f.Attributes & FieldAttributes.SpecialName) == 0);
 
         /// <summary>
         /// 基底クラスも含めて全部のプロパティを取得する。
@@ -33,16 +25,7 @@ namespace DynamicUtils
         /// </summary>
         /// <param name="ti"></param>
         /// <returns></returns>
-        public static IEnumerable<PropertyInfo> GetAllProperties(this TypeInfo ti)
-        {
-            var properties = ti.DeclaredProperties.Where(p => !p.GetCustomAttributes().Any(a => a.GetType().Name.Contains("Ignore")));
-
-            var b = ti.BaseType;
-            if (b == null)
-                return properties;
-            else
-                return GetAllProperties(b.GetTypeInfo()).Concat(properties);
-        }
+        public static IEnumerable<PropertyInfo> GetAllProperties(this Type t) => t.GetProperties(Public | Instance).Where(p => !p.GetCustomAttributes().Any(a => a.GetType().Name.Contains("Ignore")));
 
         /// <summary>
         /// 型を定義するためのキーワード、クラスなら class、構造体なら struct … を取得する。

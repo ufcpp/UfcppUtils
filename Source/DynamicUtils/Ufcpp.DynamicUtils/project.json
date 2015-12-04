@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.2.1-*",
+  "version": "1.2.3-*",
   "description": "Utilities for reflection, expression trees, dynamic features.",
   "authors": [ "iwanaga" ],
   "tags": [ "dynamic, expression trees" ],

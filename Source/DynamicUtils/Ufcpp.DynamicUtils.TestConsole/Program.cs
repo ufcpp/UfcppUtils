@@ -11,6 +11,9 @@ namespace Ufcpp.DynamicUtils.TestConsole
             var x = new RawData { Name = "aaa", Data = new byte[] { 1, 2, 3, 4, 5, 6 } };
             var d = x.AsDictionary();
 
+            var keys = d.Keys;
+            Console.WriteLine(string.Join(", ", keys));
+
             Console.WriteLine(d["Name"]);
 
             foreach (var item in (byte[])d["Data"])
@@ -27,7 +30,11 @@ namespace Ufcpp.DynamicUtils.TestConsole
 
     public class Sample
     {
+        public static string Version => "1.1";
+
         public string Name { get; set; }
+
+        public int? OptionalId { get; set; }
     }
 
     public class Point : Sample
@@ -39,5 +46,8 @@ namespace Ufcpp.DynamicUtils.TestConsole
     public class RawData : Sample
     {
         public byte[] Data { get; set; }
+
+        public RawData() { }
+        public RawData(int id) { OptionalId = id; }
     }
 }

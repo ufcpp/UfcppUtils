@@ -11,7 +11,7 @@ namespace DynamicUtils
     {
         public static IEnumerable<string> GetPropertyNames(Type t)
             =>
-            from p in t.GetTypeInfo().GetAllProperties()
+            from p in t.GetAllProperties()
             where p.GetGetMethod() != null
             select p.Name;
 
@@ -25,7 +25,7 @@ namespace DynamicUtils
             var t = typeof(T);
 
             var properties = (
-                from p in t.GetTypeInfo().GetAllProperties()
+                from p in t.GetAllProperties()
                 where p.GetGetMethod() != null
                 select p
                 ).ToArray();
@@ -65,7 +65,7 @@ namespace DynamicUtils
             var t = typeof(T);
 
             var properties = (
-                from p in t.GetProperties(Public | Instance)
+                from p in t.GetAllProperties()
                 where p.GetSetMethod() != null
                 select p
                 ).ToArray();
