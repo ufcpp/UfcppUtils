@@ -1,0 +1,22 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "dynamically loads an object from a serialized file with System.IO.FileSystemWatcher",
+  "authors": [ "ufcpp" ],
+  "tags": [ "FileSystemWatcher", "configuration" ],
+  "projectUrl": "https://github.com/ufcpp/UfcppUtils",
+  "licenseUrl": "https://github.com/ufcpp/UfcppUtils/blob/master/LICENSE",
+
+  "frameworks": {
+    "net451": { },
+    "dotnet5.4": {
+      "dependencies": {
+        "System.Linq": "4.0.1-beta-23516",
+        "System.Runtime": "4.0.21-beta-23516",
+        "System.Runtime.InteropServices": "4.0.21-beta-23516",
+        "System.Threading": "4.0.11-beta-23516",
+        "System.IO.FileSystem": "4.0.1-beta-23516",
+        "System.IO.FileSystem.Watcher": "4.0.0-beta-23516"
+      }
+    }
+  }
+}
