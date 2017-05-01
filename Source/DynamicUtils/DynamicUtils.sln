@@ -1,18 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Ufcpp.DynamicUtils", "Ufcpp.DynamicUtils\Ufcpp.DynamicUtils.xproj", "{12E6B55F-BE7C-406B-87C3-2204DC9CE556}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7B3AF0AC-F8D5-4962-93BA-CD493AE6A07F}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Ufcpp.DynamicUtils.Test", "Ufcpp.DynamicUtils.Test\Ufcpp.DynamicUtils.Test.xproj", "{DEE4EF53-E57B-41CD-80E9-B7FE495F73B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ufcpp.DynamicUtils", "Ufcpp.DynamicUtils\Ufcpp.DynamicUtils.csproj", "{12E6B55F-BE7C-406B-87C3-2204DC9CE556}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Ufcpp.DynamicUtils.TestConsole", "Ufcpp.DynamicUtils.TestConsole\Ufcpp.DynamicUtils.TestConsole.xproj", "{9E8EFCF2-643B-4CB7-8FCF-8E803467A1E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ufcpp.DynamicUtils.Test", "Ufcpp.DynamicUtils.Test\Ufcpp.DynamicUtils.Test.csproj", "{DEE4EF53-E57B-41CD-80E9-B7FE495F73B4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ufcpp.DynamicUtils.TestConsole", "Ufcpp.DynamicUtils.TestConsole\Ufcpp.DynamicUtils.TestConsole.csproj", "{9E8EFCF2-643B-4CB7-8FCF-8E803467A1E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
