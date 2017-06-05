@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>dynamically loads an object from a serialized file with System.IO.FileSystemWatcher</Description>
+    <Authors>ufcpp</Authors>
+    <TargetFrameworks>net451;netstandard1.4</TargetFrameworks>
+    <AssemblyName>Ufcpp.FileSystemWatcher</AssemblyName>
+    <PackageId>Ufcpp.FileSystemWatcher</PackageId>
+    <PackageTags>FileSystemWatcher;configuration</PackageTags>
+    <PackageProjectUrl>https://github.com/ufcpp/UfcppUtils</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/ufcpp/UfcppUtils/blob/master/LICENSE</PackageLicenseUrl>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.4'">
+    <PackageReference Include="System.IO.FileSystem.Watcher">
+      <Version>4.3.0</Version>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

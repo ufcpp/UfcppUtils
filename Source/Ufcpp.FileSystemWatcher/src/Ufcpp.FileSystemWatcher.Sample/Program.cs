@@ -8,9 +8,9 @@ namespace Ufcpp.FileSystemWatcher.Sample
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine(Path.GetFullPath("sample.txt"));
+            Console.WriteLine(Path.GetFullPath("test\\sample.txt"));
 
-            using (var loader = new Loader<string[]>("sample.txt", async s =>
+            using (var loader = new Loader<string[]>("test\\sample.txt", async s =>
             {
                 using (var r = new StreamReader(s))
                 {

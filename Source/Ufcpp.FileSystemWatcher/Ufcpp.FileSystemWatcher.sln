@@ -1,18 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25029.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26510.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{103C5092-B2A5-4F06-81E0-6F3335AB26BF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2148CC28-D520-4B95-A248-C356AE751CA4}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ufcpp.FileSystemWatcher", "src\Ufcpp.FileSystemWatcher\Ufcpp.FileSystemWatcher.csproj", "{549412ED-E636-4645-8BFB-00CF20DFD3CB}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Ufcpp.FileSystemWatcher", "src\Ufcpp.FileSystemWatcher\Ufcpp.FileSystemWatcher.xproj", "{549412ED-E636-4645-8BFB-00CF20DFD3CB}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Ufcpp.FileSystemWatcher.Sample", "src\Ufcpp.FileSystemWatcher.Sample\Ufcpp.FileSystemWatcher.Sample.xproj", "{D6E4C3C8-AF29-4CB3-B9D7-BF2F9EC79F73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ufcpp.FileSystemWatcher.Sample", "src\Ufcpp.FileSystemWatcher.Sample\Ufcpp.FileSystemWatcher.Sample.csproj", "{D6E4C3C8-AF29-4CB3-B9D7-BF2F9EC79F73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

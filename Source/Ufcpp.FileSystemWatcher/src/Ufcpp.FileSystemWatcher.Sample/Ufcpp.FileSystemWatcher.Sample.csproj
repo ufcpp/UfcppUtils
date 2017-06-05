@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Ufcpp.FileSystemWatcher.Sample Console Application</Description>
+    <Authors>xii-h</Authors>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <AssemblyName>Ufcpp.FileSystemWatcher.Sample</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>Ufcpp.FileSystemWatcher.Sample</PackageId>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ufcpp.FileSystemWatcher\Ufcpp.FileSystemWatcher.csproj" />
+  </ItemGroup>
+
+</Project>
