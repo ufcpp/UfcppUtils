@@ -18,11 +18,19 @@ namespace BindableHelper
             public WrapType()
             {
                 var properties = typeof(T).GetProperties();
-                _properties = new PropertyInfo[properties.Length];
+                var fields = typeof(T).GetFields();
+                _properties = new PropertyInfo[properties.Length + fields.Length];
 
                 for (int i = 0; i < properties.Length; i++)
                 {
-                    _properties[i] = new WrapProperty(properties[i]);
+                    var m = properties[i];
+                    _properties[i] = new WrapProperty(m.PropertyType, m);
+                }
+
+                for (int i = 0; i < fields.Length; i++)
+                {
+                    var m = fields[i];
+                    _properties[i + properties.Length] = new WrapProperty(m.FieldType, m);
                 }
             }
 
@@ -72,10 +80,12 @@ namespace BindableHelper
 
         private class WrapProperty : PropertyInfo
         {
-            PropertyInfo _info;
+            Type _memberType;
+            MemberInfo _info;
 
-            public WrapProperty(PropertyInfo info)
+            public WrapProperty(Type memberType, MemberInfo info)
             {
+                _memberType = memberType;
                 _info = info;
             }
 
@@ -92,10 +102,10 @@ namespace BindableHelper
             }
 
             #region Dummy Impl
-            public override Type PropertyType => _info.PropertyType;
-            public override PropertyAttributes Attributes => _info.Attributes;
-            public override bool CanRead => _info.CanRead;
-            public override bool CanWrite => _info.CanWrite;
+            public override Type PropertyType => _memberType;
+            public override PropertyAttributes Attributes => PropertyAttributes.None;
+            public override bool CanRead => true;
+            public override bool CanWrite => true;
             public override string Name => _info.Name;
             public override ParameterInfo[] GetIndexParameters() => Array.Empty<ParameterInfo>();
             public override MethodInfo GetGetMethod(bool nonPublic) => new DummyMethodInfo();
