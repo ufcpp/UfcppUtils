@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindableWrapper", "BindableWrapper\BindableWrapper.csproj", "{1265BCC4-5B59-4CD6-BBE9-6AB02BA39E9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBindableWrapper", "TestBindableWrapper\TestBindableWrapper.csproj", "{223E0EDB-BEE9-45B2-8300-1013331E6B4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1265BCC4-5B59-4CD6-BBE9-6AB02BA39E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1265BCC4-5B59-4CD6-BBE9-6AB02BA39E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1265BCC4-5B59-4CD6-BBE9-6AB02BA39E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1265BCC4-5B59-4CD6-BBE9-6AB02BA39E9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{223E0EDB-BEE9-45B2-8300-1013331E6B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{223E0EDB-BEE9-45B2-8300-1013331E6B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{223E0EDB-BEE9-45B2-8300-1013331E6B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{223E0EDB-BEE9-45B2-8300-1013331E6B4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89AAA298-D16E-4235-9F91-77EA7BCEE1E5}
+	EndGlobalSection
+EndGlobal
