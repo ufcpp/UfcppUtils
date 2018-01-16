@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <Description>dynamically loads an object from a serialized file with System.IO.FileSystemWatcher</Description>
+    <VersionPrefix>1.0.1</VersionPrefix>
     <Authors>ufcpp</Authors>
     <TargetFrameworks>net451;netstandard1.4</TargetFrameworks>
     <AssemblyName>Ufcpp.FileSystemWatcher</AssemblyName>
@@ -9,12 +10,8 @@
     <PackageTags>FileSystemWatcher;configuration</PackageTags>
     <PackageProjectUrl>https://github.com/ufcpp/UfcppUtils</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/ufcpp/UfcppUtils/blob/master/LICENSE</PackageLicenseUrl>
-    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
-    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+    <PackageReleaseNotes>support netstandard1.4</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">

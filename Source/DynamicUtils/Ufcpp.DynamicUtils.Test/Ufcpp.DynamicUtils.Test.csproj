@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>Ufcpp.DynamicUtils.Test Class Library</Description>
     <Authors>iwanaga</Authors>
-    <TargetFrameworks>dnx451;dnxcore50</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
     <AssemblyName>Ufcpp.DynamicUtils.Test</AssemblyName>
     <PackageId>Ufcpp.DynamicUtils.Test</PackageId>
   </PropertyGroup>
@@ -13,13 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="xunit" Version="2.2.0-beta5-build3474" />
-    <PackageReference Include="xunit.runner.dnx" Version="2.1.0-beta6-build191" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'dnx451' ">
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
   </ItemGroup>
 
 </Project>

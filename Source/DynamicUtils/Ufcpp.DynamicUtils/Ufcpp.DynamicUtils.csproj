@@ -2,43 +2,16 @@
 
   <PropertyGroup>
     <Description>Utilities for reflection, expression trees, dynamic features.</Description>
-    <VersionPrefix>1.2.3</VersionPrefix>
+    <VersionPrefix>1.2.4</VersionPrefix>
     <Authors>iwanaga</Authors>
-    <TargetFrameworks>dotnet;dnx451;dnxcore50</TargetFrameworks>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <AssemblyName>Ufcpp.DynamicUtils</AssemblyName>
     <PackageId>Ufcpp.DynamicUtils</PackageId>
     <PackageTags>dynamic, expression trees</PackageTags>
-    <PackageReleaseNotes>Ignore properties which has a ***Ignore atttribute</PackageReleaseNotes>
+    <PackageReleaseNotes>support netstandard2.0</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/ufcpp/DynamicUtils</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/ufcpp/DynamicUtils/blob/master/LICENSE</PackageLicenseUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="*.shproj;*.projitems" />
-    <EmbeddedResource Remove="*.shproj;*.projitems" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'dotnet5.0' ">
-    <PackageReference Include="System.Collections" Version="4.0.11" />
-    <PackageReference Include="System.Linq" Version="4.1.0" />
-    <PackageReference Include="System.Reflection" Version="4.1.0" />
-    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.1.0" />
-    <PackageReference Include="System.Runtime" Version="4.1.0" />
-    <PackageReference Include="Microsoft.CSharp" Version="4.0.1" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'dnx451' ">
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'dnxcore50' ">
-    <PackageReference Include="System.Collections" Version="4.0.11" />
-    <PackageReference Include="System.Linq" Version="4.1.0" />
-    <PackageReference Include="System.Reflection" Version="4.1.0" />
-    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.1.0" />
-    <PackageReference Include="System.Runtime" Version="4.1.0" />
-    <PackageReference Include="Microsoft.CSharp" Version="4.0.1" />
-  </ItemGroup>
 
 </Project>
