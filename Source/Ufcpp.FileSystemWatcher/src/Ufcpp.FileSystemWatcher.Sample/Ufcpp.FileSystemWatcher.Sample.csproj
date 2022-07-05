@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>Ufcpp.FileSystemWatcher.Sample Console Application</Description>
     <Authors>xii-h</Authors>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>Ufcpp.FileSystemWatcher.Sample</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>Ufcpp.FileSystemWatcher.Sample</PackageId>

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>Ufcpp.DynamicUtils.TestConsole Console Application</Description>
     <Authors>iwanaga</Authors>
-    <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
+    <TargetFrameworks>net6.0</TargetFrameworks>
     <AssemblyName>Ufcpp.DynamicUtils.TestConsole</AssemblyName>
     <PackageId>Ufcpp.DynamicUtils.TestConsole</PackageId>
   </PropertyGroup>

@@ -4,7 +4,7 @@
     <Description>dynamically loads an object from a serialized file with System.IO.FileSystemWatcher</Description>
     <VersionPrefix>1.0.1</VersionPrefix>
     <Authors>ufcpp</Authors>
-    <TargetFrameworks>net451;netstandard1.4</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <AssemblyName>Ufcpp.FileSystemWatcher</AssemblyName>
     <PackageId>Ufcpp.FileSystemWatcher</PackageId>
     <PackageTags>FileSystemWatcher;configuration</PackageTags>
